@@ -3,8 +3,8 @@ https://user-images.githubusercontent.com/16511866/123431532-06458580-d5d2-11eb-
 Access the application here: http://ec2-54-202-85-110.us-west-2.compute.amazonaws.com:3000/
 
 # Description
-The backend provides an endpoint that returns a list of stocks given the symbol name, the start date, and the end date. It creates the models from csv files.  
-The frontend allows the user to change each of these parameters, and whenever a parameter is changed, a call is made to the backend.
+The backend (Django) provides an endpoint that returns a list of stocks given the symbol name, the start date, and the end date. It creates the models from csv files.  
+The frontend (React) allows the user to change each of these parameters, and whenever a parameter is changed, a call is made to the backend.
 
 # Setup
 `sudo apt update`  
@@ -19,7 +19,6 @@ The frontend allows the user to change each of these parameters, and whenever a 
 `python manage.py migrate`  
 `python -u manage.py load_stocks --path data`  
 `python manage.py runserver`  
-
 
 ## Frontend
 `npm install`  
