@@ -27,7 +27,7 @@ class Command(BaseCommand):
         """
         Stock.objects.all().delete()
         self.stdout.write("database cleared")
-        self.stdout.write("creating objects.", end="")
+        self.stdout.write("creating objects.", ending="")
         path = kwargs['path']  # data/
         for filename in os.listdir(path):
             if filename[-4:] != ".csv":
@@ -45,5 +45,5 @@ class Command(BaseCommand):
                         close=row[5],
                         symbol=row[0],
                     )
-            self.stdout.write(".", end="")
+            self.stdout.write(".", ending="")
         self.stdout.write("done")
